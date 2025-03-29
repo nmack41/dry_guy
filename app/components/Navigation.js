@@ -12,7 +12,7 @@ export default function Navigation() {
     { label: "Home", href: "/", icon: "🏠" },
     { label: "History", href: "/history", icon: "📊" },
     { label: "Alerts", href: "/alerts", icon: "🔔" },
-    { label: "Customize", href: "/customize", icon: "🎨" },
+    // { label: "Customize", href: "/customize", icon: "🎨" },
     { label: "Settings", href: "/settings", icon: "⚙️" },
   ];
 
