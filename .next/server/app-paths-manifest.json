@@ -1,6 +1,6 @@
 {
-  "/page": "app/page.js",
   "/history/page": "app/history/page.js",
+  "/page": "app/page.js",
   "/alerts/page": "app/alerts/page.js",
   "/settings/page": "app/settings/page.js",
   "/add-plant/page": "app/add-plant/page.js"
