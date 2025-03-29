@@ -9,7 +9,12 @@ import Navigation from "./components/Navigation";
 export default function Home() {
   const [petMood, setPetMood] = useState("happy");
   const [petName, setPetName] = useState("Russell");
-  const [streakDays, setStreakDays] = useState(5);
+  const [petAge, setPetAge] = useState(2);
+  const [petCommonName, setPetCommonName] = useState("Snake Plant");
+  const [petScientificName, setPetScientificName] = useState(
+    "Sansevieria trifasciata"
+  );
+  const [streakDays, setStreakDays] = useState(2);
   const [imageUrl, setImageUrl] = useState("/images/Russell.png");
 
   // Simulated sensor data (in a real app, this would come from the backend)
@@ -51,7 +56,16 @@ export default function Home() {
     <main className="min-h-screen pb-16">
       <div className="p-5">
         <div className="flex justify-between items-center mb-6">
-          <h1 className="text-2xl font-bold text-primary-dark">{petName}</h1>
+          <div>
+            <h1 className="text-2xl font-bold text-primary-dark">{petName}</h1>
+            <p className="text-base text-text-secondary mt-1">
+              Age: {petAge} years
+            </p>
+            <p className="text-base text-text-primary mt-1">{petCommonName}</p>
+            <p className="text-sm text-text-secondary italic mt-0.5">
+              {petScientificName}
+            </p>
+          </div>
           <div className="text-sm bg-accent-light text-accent-dark py-1 px-3 rounded-full font-semibold">
             {streakDays}-day streak 🔥
           </div>

@@ -706,6 +706,9 @@ video {
 .mt-8{
   margin-top: 2rem;
 }
+.mt-0\.5{
+  margin-top: 0.125rem;
+}
 .inline-block{
   display: inline-block;
 }
@@ -962,6 +965,10 @@ video {
   font-size: 0.75rem;
   line-height: 1rem;
 }
+.text-base{
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
 .font-bold{
   font-weight: 700;
 }
@@ -970,6 +977,12 @@ video {
 }
 .font-semibold{
   font-weight: 600;
+}
+.lowercase{
+  text-transform: lowercase;
+}
+.italic{
+  font-style: italic;
 }
 .text-accent-dark{
   --tw-text-opacity: 1;
