@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 45, 55, 72;
+  --background-rgb: 245, 249, 250;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background-color: rgb(var(--background-rgb));
+  font-family: "Inter", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+}
+
+@layer components {
+  .pet-container {
+    @apply relative w-40 h-40 mx-auto rounded-full bg-primary-light flex items-center justify-center shadow-medium transition-all duration-300 hover:scale-105;
+  }
+
+  .sensor-card {
+    @apply bg-card rounded-2xl p-4 shadow-soft transition-all hover:shadow-medium;
+  }
+
+  .nav-item {
+    @apply flex flex-col items-center p-2 text-xs text-text-light hover:text-primary transition-colors;
+  }
+
+  .nav-item.active {
+    @apply text-primary;
+  }
+
+  .button-primary {
+    @apply bg-primary text-white py-2 px-4 rounded-xl shadow-soft hover:bg-primary-dark transition-colors;
+  }
+
+  .button-secondary {
+    @apply bg-secondary text-white py-2 px-4 rounded-xl shadow-soft hover:bg-secondary-dark transition-colors;
+  }
+
+  .alert-item {
+    @apply bg-card rounded-xl p-4 shadow-soft mb-3 border-l-4 border-accent hover:shadow-medium transition-all cursor-pointer;
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "dry_guy_ui",
+  "version": "1.0.0",
+  "description": "Water Sensor Tamagotchi App UI Prototype",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.4.14",
+    "framer-motion": "^10.12.16",
+    "next": "^14.0.3",
+    "postcss": "^8.4.24",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "recharts": "^2.7.2",
+    "tailwindcss": "^3.3.2"
+  }
+}
