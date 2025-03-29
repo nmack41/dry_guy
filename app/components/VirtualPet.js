@@ -1,61 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
 
-export default function VirtualPet({ mood = "happy", onClick }) {
-  const [animation, setAnimation] = useState({});
-
-  useEffect(() => {
-    // Different animations based on mood
-    switch (mood) {
-      case "happy":
-        setAnimation({
-          y: [0, -10, 0],
-          transition: {
-            y: {
-              repeat: Infinity,
-              duration: 2,
-              ease: "easeInOut",
-            },
-          },
-        });
-        break;
-      case "sad":
-        setAnimation({
-          rotate: [-2, 2, -2],
-          transition: {
-            rotate: {
-              repeat: Infinity,
-              duration: 4,
-              ease: "easeInOut",
-            },
-          },
-        });
-        break;
-      case "sick":
-        setAnimation({
-          scale: [1, 0.97, 1],
-          transition: {
-            scale: {
-              repeat: Infinity,
-              duration: 1.5,
-              ease: "easeInOut",
-            },
-          },
-        });
-        break;
-      default:
-        setAnimation({});
-    }
-  }, [mood]);
-
-  const faceExpressions = {
-    happy: "◠‿◠",
-    sad: "◡︵◡",
-    sick: "◑.◑",
-  };
-
+/**
+ * VirtualPet Component
+ * Displays the virtual pet, now using an image.
+ * @param {string} mood - Current mood ('happy', 'sad', 'sick'), affects background color.
+ * @param {string} imageUrl - URL of the image to display for the pet.
+ */
+export default function VirtualPet({ mood = "happy", imageUrl }) {
+  // Colors for the background circle based on mood
   const petColors = {
     happy: "bg-primary-light",
     sad: "bg-accent-light",
@@ -64,18 +18,32 @@ export default function VirtualPet({ mood = "happy", onClick }) {
 
   return (
     <motion.div
-      className={`pet-container ${petColors[mood]}`}
-      animate={animation}
-      onClick={onClick}
+      // Apply background color based on mood and ensure image stays within bounds
+      className={`pet-container ${petColors[mood]} overflow-hidden`}
+      // Added simple hover/tap scaling effect
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
     >
-      <div className="flex flex-col items-center">
-        <div className="text-4xl mb-2">
-          {mood === "happy" ? "🐠" : mood === "sad" ? "🐡" : "🐡"}
+      {/* Check if an imageUrl is provided */}
+      {imageUrl ? (
+        <img
+          src={imageUrl}
+          alt={`Pet feeling ${mood}`}
+          // Basic styling to fit the image: full width/height, contain aspect ratio, some padding
+          // You may need to adjust padding/object-fit based on your image dimensions
+          className="w-full h-full object-contain p-4"
+          // Add error handling for broken image links (optional but good practice)
+          onError={(e) => {
+            e.target.onerror = null;
+            e.target.src = "Error";
+          }}
+        />
+      ) : (
+        // Fallback content if no imageUrl is provided
+        <div className="flex items-center justify-center h-full">
+          <span className="text-4xl text-gray-400">?</span>
         </div>
-        <div className="text-2xl">{faceExpressions[mood]}</div>
-      </div>
+      )}
     </motion.div>
   );
 }

@@ -9,33 +9,6 @@ export default function Alerts() {
   const [alerts, setAlerts] = useState([
     {
       id: 1,
-      title: "Water too cold!",
-      message:
-        "Your pet is feeling chilly. The water temperature is below the recommended level. Consider turning up your heater to keep your pet comfortable.",
-      time: "10 minutes ago",
-      severity: "warning",
-      read: false,
-    },
-    {
-      id: 2,
-      title: "Time to clean!",
-      message:
-        "Your pet's tank needs cleaning soon. Cleanliness levels are dropping below optimal levels. Schedule a cleaning in the next 2 days.",
-      time: "3 hours ago",
-      severity: "info",
-      read: false,
-    },
-    {
-      id: 3,
-      title: "pH level dropping",
-      message:
-        "The pH level is gradually decreasing. It's still in the safe range, but keep an eye on it. Consider adding pH stabilizer if it continues to drop.",
-      time: "1 day ago",
-      severity: "info",
-      read: true,
-    },
-    {
-      id: 4,
       title: "Pet is hungry!",
       message:
         "Your pet hasn't been fed in 24 hours! Please feed your pet soon to maintain their health and happiness.",
