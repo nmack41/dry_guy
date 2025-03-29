@@ -13,6 +13,7 @@ export default function Navigation() {
     { label: "History", href: "/history", icon: "📊" },
     { label: "Alerts", href: "/alerts", icon: "🔔" },
     // { label: "Customize", href: "/customize", icon: "🎨" },
+    { label: "Add New Plant", href: "/add-plant", icon: "➕" },
     { label: "Settings", href: "/settings", icon: "⚙️" },
   ];
 
