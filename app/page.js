@@ -7,14 +7,14 @@ import PetStatusCard from "./components/PetStatusCard";
 import Navigation from "./components/Navigation";
 
 export default function Home() {
-  const [petMood, setPetMood] = useState("happy");
+  const [petMood, setPetMood] = useState("sick");
   const [petName, setPetName] = useState("Russell");
   const [petAge, setPetAge] = useState(2);
   const [petCommonName, setPetCommonName] = useState("Snake Plant");
   const [petScientificName, setPetScientificName] = useState(
     "Sansevieria trifasciata"
   );
-  const [streakDays, setStreakDays] = useState(2);
+  const [streakDays, setStreakDays] = useState(0);
   const [imageUrl, setImageUrl] = useState("/images/Russell.png");
 
   // Simulated sensor data (in a real app, this would come from the backend)
@@ -65,9 +65,6 @@ export default function Home() {
             <p className="text-sm text-text-secondary italic mt-0.5">
               {petScientificName}
             </p>
-          </div>
-          <div className="text-sm bg-accent-light text-accent-dark py-1 px-3 rounded-full font-semibold">
-            {streakDays}-day streak 🔥
           </div>
         </div>
 

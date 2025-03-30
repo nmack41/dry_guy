@@ -8,22 +8,22 @@ export default function History() {
   // Removed temperatureData, phData, cleanlinessData, moodHistory
   // Add sample data for Moisture (e.g., Humidity %)
   const moistureData = [
-    { time: "Mon", value: 55 },
-    { time: "Tue", value: 42 },
-    { time: "Wed", value: 36 },
-    { time: "Thu", value: 25 },
-    { time: "Fri", value: 18 },
-    { time: "Sat", value: 61 },
-    { time: "Sun", value: 57 },
+    { time: "Mon", value: 73 },
+    { time: "Tue", value: 60 },
+    { time: "Wed", value: 52 },
+    { time: "Thu", value: 47 },
+    { time: "Fri", value: 30 },
+    { time: "Sat", value: 23 },
+    { time: "Sun", value: 18 },
   ];
 
   const SunlightData = [
-    { time: "Mon", value: 8 }, // Example: 8 hours
+    { time: "Mon", value: 8 },
     { time: "Tue", value: 9 },
     { time: "Wed", value: 7 },
     { time: "Thu", value: 10 },
     { time: "Fri", value: 11 },
-    { time: "Sat", value: 6 }, // Maybe cloudy?
+    { time: "Sat", value: 6 },
     { time: "Sun", value: 9 },
   ];
 

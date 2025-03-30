@@ -1,6 +1,7 @@
 {
-  "/history/page": "app/history/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
   "/page": "app/page.js",
+  "/history/page": "app/history/page.js",
   "/alerts/page": "app/alerts/page.js",
   "/settings/page": "app/settings/page.js",
   "/add-plant/page": "app/add-plant/page.js"

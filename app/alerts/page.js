@@ -9,10 +9,10 @@ export default function Alerts() {
   const [alerts, setAlerts] = useState([
     {
       id: 1,
-      title: "Russell is hungry!",
+      title: "Russell is thirsty!",
       message:
-        "Your pet hasn't been fed in 24 hours! Please feed your pet soon to maintain their health and happiness.",
-      time: "2 days ago",
+        "Russell needs water! Please water your pet soon to maintain their health and happiness.",
+      time: "today",
       severity: "critical",
       read: true,
     },
